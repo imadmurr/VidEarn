@@ -1,0 +1,491 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/lightGray"
+    android:fillViewport="true"
+    tools:context=".offerwalls.ui.SurveysFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- CardView 1: Bitlabs -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/bitlabs_card"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="24dp"
+            app:cardElevation="8dp"
+            android:background="@android:color/white"
+            app:cardCornerRadius="12dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="16dp">
+
+                <!-- ImageView with Rounded Corners -->
+                <ImageView
+                    android:id="@+id/bitlabs_image"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/bitlab"
+                    android:scaleType="centerCrop"
+                    android:background="@drawable/rounded_corners"
+                    android:contentDescription="Bitlabs" />
+
+                <!-- Text and Badge -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@id/bitlabs_image"
+                    android:layout_toRightOf="@id/bitlabs_image"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:orientation="vertical"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="48dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Bitlabs"
+                        android:textSize="18sp"
+                        android:textColor="@color/black"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Earn up to 2$ per survey"
+                        android:textSize="14sp"
+                        android:textColor="@android:color/darker_gray"
+                        android:layout_marginTop="4dp" />
+
+                </LinearLayout>
+
+                <!-- Arrow Icon -->
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_below="@id/bitlabs_badge"
+                    android:src="@drawable/ic_arrow_forward_24"
+                    android:contentDescription="Arrow"
+                    app:tint="@color/blue" />
+
+                <!-- Badge -->
+                <TextView
+                    android:id="@+id/bitlabs_badge"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginBottom="8dp"
+                    android:background="@drawable/shape_badge_red_background"
+                    android:paddingHorizontal="8dp"
+                    android:paddingVertical="4dp"
+                    android:text="High Paying"
+                    android:textColor="@android:color/white"
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
+
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <!-- CardView 2: CPX Research -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cpx_research_card"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="24dp"
+            android:layout_marginBottom="24dp"
+            app:cardElevation="8dp"
+            android:background="@android:color/white"
+            app:cardCornerRadius="12dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="16dp">
+
+                <!-- ImageView with Rounded Corners -->
+                <ImageView
+                    android:id="@+id/cpx_research_image"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/cpxresearch"
+                    android:scaleType="centerCrop"
+                    android:background="@drawable/rounded_corners"
+                    android:contentDescription="KiwiWall" />
+
+                <!-- Text and Badge -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@id/cpx_research_image"
+                    android:layout_toLeftOf="@id/cpx_research_image"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:orientation="vertical"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="48dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="CPX Research"
+                        android:textSize="18sp"
+                        android:textColor="@color/black"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="High paying surveys"
+                        android:textSize="14sp"
+                        android:textColor="@android:color/darker_gray"
+                        android:layout_marginTop="4dp" />
+
+                </LinearLayout>
+
+                <!-- Arrow Icon -->
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_below="@id/cpx_research_badge"
+                    android:src="@drawable/ic_arrow_forward_24"
+                    android:contentDescription="Arrow"
+                    app:tint="@color/blue" />
+
+                <!-- Badge -->
+                <TextView
+                    android:id="@+id/cpx_research_badge"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginBottom="8dp"
+                    android:background="@drawable/shape_badge_red_background"
+                    android:paddingHorizontal="8dp"
+                    android:paddingVertical="4dp"
+                    android:text="New!"
+                    android:textColor="@android:color/white"
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
+
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <!-- CardView 3: CpaLead -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cpa_lead_card"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="24dp"
+            android:layout_marginBottom="24dp"
+            app:cardElevation="8dp"
+            android:background="@android:color/white"
+            app:cardCornerRadius="12dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="16dp">
+
+                <!-- ImageView with Rounded Corners -->
+                <ImageView
+                    android:id="@+id/cpa_lead_image"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/cpalead"
+                    android:scaleType="centerCrop"
+                    android:background="@drawable/rounded_corners"
+                    android:contentDescription="CpaLead" />
+
+                <!-- Text and Badge -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@id/cpa_lead_image"
+                    android:layout_toLeftOf="@id/cpa_lead_image"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:orientation="vertical"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="48dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="CPA Lead"
+                        android:textSize="18sp"
+                        android:textColor="@color/black"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Earn by completing offers"
+                        android:textSize="14sp"
+                        android:textColor="@android:color/darker_gray"
+                        android:layout_marginTop="4dp" />
+
+                </LinearLayout>
+
+                <!-- Arrow Icon -->
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_below="@id/cpalead_badge"
+                    android:src="@drawable/ic_arrow_forward_24"
+                    android:contentDescription="Arrow"
+                    app:tint="@color/blue" />
+
+                <!-- Badge -->
+                <TextView
+                    android:id="@+id/cpalead_badge"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentEnd="true"
+                    android:background="@drawable/shape_badge_red_background"
+                    android:paddingHorizontal="8dp"
+                    android:paddingVertical="4dp"
+                    android:text="Popular"
+                    android:textSize="12sp"
+                    android:textColor="@android:color/white"
+                    android:textStyle="bold"
+                    />
+
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <!-- CardView 4: KiwiWall -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/kiwi_wall_card"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="24dp"
+            app:cardElevation="8dp"
+            android:background="@android:color/white"
+            app:cardCornerRadius="12dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="16dp">
+
+                <!-- ImageView with Rounded Corners -->
+                <ImageView
+                    android:id="@+id/kiwi_wall_image"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/kiwiwall"
+                    android:scaleType="centerCrop"
+                    android:background="@drawable/rounded_corners"
+                    android:contentDescription="KiwiWall" />
+
+                <!-- Text and Badge -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@id/kiwi_wall_image"
+                    android:layout_toLeftOf="@id/kiwi_wall_image"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:orientation="vertical"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="48dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Kiwi Wall"
+                        android:textSize="18sp"
+                        android:textColor="@color/black"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Earn by trying new apps"
+                        android:textSize="14sp"
+                        android:textColor="@android:color/darker_gray"
+                        android:layout_marginTop="4dp" />
+
+                </LinearLayout>
+
+                <!-- Arrow Icon -->
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_below="@id/kiwiwall_badge"
+                    android:src="@drawable/ic_arrow_forward_24"
+                    android:contentDescription="Arrow"
+                    app:tint="@color/blue" />
+
+                <!-- Badge -->
+                <TextView
+                    android:id="@+id/kiwiwall_badge"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginBottom="8dp"
+                    android:background="@drawable/shape_badge_red_background"
+                    android:paddingHorizontal="8dp"
+                    android:paddingVertical="4dp"
+                    android:text="Good"
+                    android:textColor="@android:color/white"
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
+
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <!-- CardView 5: Pollfish -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/pollfish_card"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="24dp"
+            android:layout_marginTop="24dp"
+            app:cardElevation="8dp"
+            android:background="@android:color/white"
+            app:cardCornerRadius="12dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="16dp">
+
+                <!-- ImageView with Rounded Corners -->
+                <ImageView
+                    android:id="@+id/pollfish_image"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/pollfish_hor"
+                    android:scaleType="centerCrop"
+                    android:background="@drawable/rounded_corners"
+                    android:contentDescription="KiwiWall" />
+
+                <!-- Text and Badge -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@id/pollfish_image"
+                    android:layout_toLeftOf="@id/pollfish_image"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:orientation="vertical"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="48dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Pollfish"
+                        android:textSize="18sp"
+                        android:textColor="@color/black"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="One of the top surveys networks"
+                        android:textSize="14sp"
+                        android:textColor="@android:color/darker_gray"
+                        android:layout_marginTop="4dp" />
+
+                </LinearLayout>
+
+                <!-- Arrow Icon -->
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_below="@id/pollfish_badge"
+                    android:src="@drawable/ic_arrow_forward_24"
+                    android:contentDescription="Arrow"
+                    app:tint="@color/blue" />
+
+                <!-- Badge -->
+                <TextView
+                    android:id="@+id/pollfish_badge"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginBottom="8dp"
+                    android:background="@drawable/shape_badge_red_background"
+                    android:paddingHorizontal="8dp"
+                    android:paddingVertical="4dp"
+                    android:text="Coming soon"
+                    android:textColor="@android:color/white"
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
+
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <!-- Pop Up Important -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="24dp"
+            android:layout_gravity="center"
+            android:padding="8dp"
+            android:orientation="horizontal"
+            android:background="@drawable/rounded_corners">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Important"
+                android:textSize="16sp"
+                android:textColor="@color/black"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/infoIcon"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/ic_info"
+                android:contentDescription="Information"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="8dp"
+                app:tint="@color/colorPrimaryDark" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:src="@drawable/ic_baseline_warning_24"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/authentication_screen_marginStartEnd"
+        android:layout_marginEnd="@dimen/authentication_screen_marginStartEnd"
+        android:layout_marginTop="16dp"
+        android:gravity="center"
+        android:text="@string/warning"
+        android:textColor="@color/snackbar_error_color"
+        android:textSize="@dimen/authentication_description_text_size" />
+
+    <TextView
+        android:id="@+id/tv_warning_address"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/authentication_screen_marginStartEnd"
+        android:layout_marginEnd="@dimen/authentication_screen_marginStartEnd"
+        android:layout_marginTop="16dp"
+        android:gravity="center"
+        android:text="0xkjnbdskvcbsdkcbdikcbnacdjadikjnadj"
+        android:textColor="@color/secondary_text_color"
+        android:textSize="@dimen/authentication_description_text_size"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/sign_up_screen_btn_marginTop"
+        android:padding="@dimen/card_view_layout_content_padding"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btn_cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="@dimen/btn_marginStartEnd"
+            android:layout_marginEnd="@dimen/btn_marginStartEnd"
+            android:background="@drawable/shape_button_rounded"
+            android:foreground="?attr/selectableItemBackground"
+            android:gravity="center"
+            android:paddingTop="@dimen/btn_paddingTopBottom"
+            android:paddingBottom="@dimen/btn_paddingTopBottom"
+            android:text="@string/cancel"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/btn_text_size" />
+
+        <Button
+            android:id="@+id/btn_warning_payment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+
+            android:layout_marginEnd="@dimen/btn_marginStartEnd"
+            android:background="@drawable/shape_button_rounded"
+            android:foreground="?attr/selectableItemBackground"
+            android:gravity="center"
+            android:paddingTop="@dimen/btn_paddingTopBottom"
+            android:paddingBottom="@dimen/btn_paddingTopBottom"
+            android:text="@string/ok"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/btn_text_size" />
+
+    </LinearLayout>
+
+</LinearLayout>

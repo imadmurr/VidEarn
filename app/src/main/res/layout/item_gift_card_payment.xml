@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="24dp"
+    android:layout_marginBottom="0dp"
+    app:cardElevation="10dp"
+    app:cardCornerRadius="8dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/item_payment_content_marginBottom"
+        android:background="?attr/selectableItemBackground">
+
+        <!-- Status badge at the top-left -->
+        <TextView
+            android:id="@+id/tv_giftcard_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:background="@drawable/shape_badge_red_background"
+            android:padding="4dp"
+            android:text="Pending.."
+            android:textColor="@color/white"
+            android:textSize="12sp"
+            android:textStyle="bold" />
+
+        <!-- Delete Icon below the badge -->
+        <ImageView
+            android:id="@+id/img_btn_delete_gift_card_payment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_giftcard_status"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="16dp"
+            android:layout_marginTop="16dp"
+            android:src="@drawable/ic_delete_payment"
+            android:contentDescription="@string/delete_payment" />
+
+        <!-- Payment Image -->
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/iv_gift_card_payment_image"
+            android:layout_width="@dimen/item_payment_image_size"
+            android:layout_height="@dimen/item_payment_image_size"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="24dp"
+            android:layout_alignParentStart="true"
+            android:contentDescription="@string/image_contentDescription"
+            android:src="@drawable/ic_user_place_holder"
+            app:civ_border_color="@color/blue"
+            app:civ_border_width="@dimen/item_payment_image_circular_border_width" />
+
+        <!-- Text Layout for Card Info -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/iv_gift_card_payment_image"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="16dp"
+            android:orientation="vertical">
+
+            <!-- Card Type -->
+            <TextView
+                android:id="@+id/tv_card_type"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/primary_text_color"
+                android:textStyle="bold"
+                android:textSize="@dimen/item_payment_amount_text_size"
+                android:maxEms="8"
+                android:maxLines="1"
+                android:ellipsize="end"
+                tools:text="Type: Amazon Card" />
+
+            <!-- Email -->
+            <TextView
+                android:id="@+id/tv_card_email"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/primary_text_color"
+                android:textSize="16sp"
+                android:maxEms="8"
+                android:maxLines="1"
+                android:ellipsize="end"
+                tools:text="Email: demo@gmail.com" />
+
+            <!-- Price -->
+            <TextView
+                android:id="@+id/tv_card_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/primary_text_color"
+                android:textSize="16sp"
+                android:maxEms="8"
+                android:maxLines="1"
+                android:ellipsize="end"
+                tools:text="Price: 1$ -> 15,000 points" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

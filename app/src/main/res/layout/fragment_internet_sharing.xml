@@ -1,0 +1,407 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".internetsharing.ui.view.InternetSharingFragment"
+    android:background="@color/lightGray"
+    android:fillViewport="true">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/lightGray">
+
+        <!-- Internet Sharing Overview CardView -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/internetSharingCard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardElevation="8dp"
+            android:layout_margin="24dp"
+            app:cardCornerRadius="12dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <!-- Traffic Shared Text -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Traffic Shared Today"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/primary_text_color"
+                    android:layout_gravity="start" />
+
+                <!-- Traffic Amount -->
+                <TextView
+                    android:id="@+id/trafficSharedAmount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="720.26 MB"
+                    android:textSize="28sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:layout_marginTop="24dp"
+                    android:layout_gravity="center_horizontal" />
+
+                <!-- Earned Points Today -->
+                <TextView
+                    android:id="@+id/earnedPointsToday"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Earned Points Today: 1500"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/primary_text_color"
+                    android:layout_marginTop="16dp"
+                    android:layout_gravity="center_horizontal" />
+
+                <!-- Earning Status -->
+                <TextView
+                    android:id="@+id/earningStatus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/not_earning"
+                    android:background="@drawable/not_earning_status_background"
+                    android:padding="8dp"
+                    android:textColor="@android:color/white"
+                    android:textStyle="bold"
+                    android:textSize="14sp"
+                    android:textAlignment="center"
+                    android:layout_marginTop="36dp"
+                    android:visibility="visible"
+                    android:layout_gravity="center_horizontal" />
+
+
+                <!-- Share Internet Button -->
+                <Button
+                    android:id="@+id/shareInternetButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Share Internet"
+                    android:textSize="16sp"
+                    android:background="@drawable/shape_button_rounded"
+                    android:textColor="@android:color/white"
+                    android:layout_marginTop="24dp"
+                    android:layout_gravity="center_horizontal" />
+
+                <!-- Info Text -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Earnings are updated every 30 min"
+                    android:textSize="14sp"
+                    android:textColor="@android:color/darker_gray"
+                    android:layout_marginTop="8dp"
+                    android:layout_gravity="center_horizontal" />
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <!-- Internet Sharing Setup CardView  -->
+        <androidx.cardview.widget.CardView
+            android:id="@id/internetSharingSetupCard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/internetSharingCard"
+            app:cardElevation="8dp"
+            android:layout_marginHorizontal="24dp"
+            android:layout_marginBottom="24dp"
+            app:cardCornerRadius="12dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <!-- Permissions Toggle -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginBottom="16dp">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginHorizontal="8dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Setup Service"
+                            android:textSize="16sp"
+                            android:textColor="@android:color/black"
+                            android:textStyle="bold" />
+
+                        <!-- Explanation Text -->
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Allow required permissions for the service to run in the background"
+                            android:textSize="14sp"
+                            android:textColor="@android:color/darker_gray"
+                            android:layout_marginTop="4dp" />
+
+                    </LinearLayout>
+
+                    <androidx.appcompat.widget.SwitchCompat
+                        android:id="@+id/switchSetupInternetSharing"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:thumbTint="@color/blue"
+                        android:trackTint="@android:color/holo_blue_light" />
+                </LinearLayout>
+
+                <!-- Battery Optimization Toggle -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginBottom="16dp">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginHorizontal="8dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Battery Optimization"
+                            android:textSize="16sp"
+                            android:textColor="@android:color/black"
+                            android:textStyle="bold" />
+
+                        <!-- Explanation Text -->
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Disable battery optimization for the app to let the service run longer and earn you more"
+                            android:textSize="14sp"
+                            android:textColor="@android:color/darker_gray"
+                            android:layout_marginTop="4dp" />
+
+                    </LinearLayout>
+
+                    <androidx.appcompat.widget.SwitchCompat
+                        android:id="@+id/switchBatteryOptimization"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:thumbTint="@color/blue"
+                        android:trackTint="@android:color/holo_blue_light" />
+
+                </LinearLayout>
+
+                <!-- Battery Optimization Toggle -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginBottom="16dp">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginHorizontal="8dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Mobile Data Usage"
+                            android:textSize="16sp"
+                            android:textColor="@android:color/black"
+                            android:textStyle="bold" />
+
+                        <!-- Explanation Text -->
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="By default, we disabled mobile data usage when sharing internet. In order to enable it, press the button."
+                            android:textSize="14sp"
+                            android:textColor="@android:color/darker_gray"
+                            android:layout_marginTop="4dp" />
+
+                    </LinearLayout>
+
+                    <androidx.appcompat.widget.SwitchCompat
+                        android:id="@+id/switchMobileDataUsage"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:thumbTint="@color/blue"
+                        android:trackTint="@android:color/holo_blue_light" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <!-- Internet Sharing About CardView  -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/internetSharingSetupCard"
+            app:cardElevation="8dp"
+            android:layout_marginHorizontal="24dp"
+            android:layout_marginBottom="24dp"
+            app:cardCornerRadius="12dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <!-- Slideshow Section -->
+                <ViewFlipper
+                    android:id="@+id/infoSlideshow"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:autoStart="true"
+                    android:flipInterval="7000">
+
+                    <!-- Slide 1 -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="16dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="About this Feature"
+                            android:textSize="20sp"
+                            android:textColor="@android:color/black"
+                            android:textStyle="bold"
+                            android:layout_gravity="center_horizontal"
+                            android:paddingBottom="8dp"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:text="Our internet sharing feature is powered by major services, making it secure and powerful."
+                            android:textSize="16sp"
+                            android:textAlignment="center"
+                            android:textColor="@android:color/darker_gray"
+                            android:layout_gravity="center_horizontal"/>
+                    </LinearLayout>
+
+                    <!-- Slide 2 -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="16dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="How does it work?"
+                            android:textSize="20sp"
+                            android:textColor="@android:color/black"
+                            android:textStyle="bold"
+                            android:layout_gravity="center_horizontal"
+                            android:paddingBottom="8dp"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:text="This service pays you for using your internet connection. Your connection is used by major companies around the world to run tasks and research."
+                            android:textSize="16sp"
+                            android:textAlignment="center"
+                            android:textColor="@android:color/darker_gray"
+                            android:layout_gravity="center_horizontal"/>
+                    </LinearLayout>
+
+                    <!-- Slide 3 -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="16dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Is it safe?"
+                            android:textSize="20sp"
+                            android:textColor="@android:color/black"
+                            android:textStyle="bold"
+                            android:layout_gravity="center_horizontal"
+                            android:paddingBottom="8dp"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:text="Absolutely! We can't in any way access your personal data or phone data. Also, the services we're working with safely encrypt the connection."
+                            android:textSize="16sp"
+                            android:textColor="@android:color/darker_gray"
+                            android:textAlignment="center"
+                            android:layout_gravity="center_horizontal"/>
+                    </LinearLayout>
+
+                </ViewFlipper>
+
+                <!-- Dots Indicator -->
+                <LinearLayout
+                    android:id="@+id/dotsLayout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="8dp">
+
+                    <ImageView
+                        android:id="@+id/dot1"
+                        android:layout_width="8dp"
+                        android:layout_height="8dp"
+                        android:layout_marginHorizontal="4dp"
+                        android:background="@drawable/dot_unselected" />
+
+                    <ImageView
+                        android:id="@+id/dot2"
+                        android:layout_width="8dp"
+                        android:layout_height="8dp"
+                        android:layout_marginHorizontal="4dp"
+                        android:background="@drawable/dot_unselected" />
+
+                    <ImageView
+                        android:id="@+id/dot3"
+                        android:layout_width="8dp"
+                        android:layout_height="8dp"
+                        android:layout_marginHorizontal="4dp"
+                        android:background="@drawable/dot_unselected" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+    </RelativeLayout>
+
+</ScrollView>

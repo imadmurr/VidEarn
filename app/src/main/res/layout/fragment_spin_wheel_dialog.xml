@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="16dp"
+    tools:context=".dailyearn.ui.view.SpinWheelFragment">
+
+    <!-- Title -->
+    <TextView
+        android:id="@+id/spin_wheel_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Spin the Wheel"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="16dp" />
+
+    <rubikstudio.library.LuckyWheelView
+        android:id="@+id/luckyWheel"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:layout_below="@id/spin_wheel_title"
+        android:layout_centerHorizontal="true"
+        app:lkwBackgroundColor="@android:color/transparent"
+        app:lkwCenterImage="@drawable/wheel"
+        app:lkwCursor="@drawable/spin"
+        app:lkwTextColor="#F8F8F8">
+
+
+    </rubikstudio.library.LuckyWheelView>
+
+    <!-- Spin Button -->
+    <Button
+        android:id="@+id/spin_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/shape_button_rounded"
+        android:text="Spin"
+        android:textColor="@color/white"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/luckyWheel"
+        android:layout_marginTop="16dp" />
+
+</RelativeLayout>

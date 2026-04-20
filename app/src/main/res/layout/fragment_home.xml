@@ -1,0 +1,297 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/lightGray"
+    android:fillViewport="true"
+    tools:context=".home.ui.view.HomeFragment">
+
+    <RelativeLayout
+        android:id="@+id/home_relative_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/lightGray">
+
+        <!-- Greeting and Profile CardView -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/greetingCardView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="24dp"
+            app:cardElevation="16dp"
+            android:background="@android:color/white"
+            app:cardCornerRadius="12dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <!-- Profile Section -->
+                <LinearLayout
+                    android:id="@+id/profileSection"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingTop="16dp"
+                    android:paddingBottom="16dp">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/profileImage"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:src="@mipmap/user_avatar_foreground"
+                        android:scaleType="centerCrop"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginEnd="16dp"/>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_gravity="center_vertical">
+
+                        <TextView
+                            android:id="@+id/greetingText"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Welcome Back, User!"
+                            android:textSize="18sp"
+                            android:textColor="@color/black"
+                            android:textStyle="bold" />
+
+                        <!-- Motivating Text -->
+                        <TextView
+                            android:id="@+id/motivatingText"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="You're doing great! Keep earning more!"
+                            android:textSize="14sp"
+                            android:textColor="@android:color/darker_gray"
+                            android:layout_marginTop="8dp"/>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Balance and Payout CardView -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/balanceCardView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="24dp"
+            android:layout_below="@id/greetingCardView"
+            android:layout_marginBottom="24dp"
+            app:cardElevation="16dp"
+            android:background="@android:color/white"
+            app:cardCornerRadius="12dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="24dp">
+
+                <!-- Balance Title -->
+                <TextView
+                    android:id="@+id/balanceTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Account Balance"
+                    android:textSize="22sp"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:layout_gravity="center_horizontal" />
+
+                <!-- Balance and Paid-out Balance Section -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="24dp">
+
+                    <!-- Current Balance -->
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:layout_gravity="center">
+
+                        <TextView
+                            android:id="@+id/currentBalanceText"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Current Balance"
+                            android:textSize="16sp"
+                            android:textColor="@android:color/darker_gray"
+                            android:layout_gravity="center_horizontal"/>
+
+                        <TextView
+                            android:id="@+id/balanceText"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="0.000$"
+                            android:textSize="28sp"
+                            android:textColor="@color/black"
+                            android:textStyle="bold"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginTop="8dp"/>
+                    </LinearLayout>
+
+                    <!-- Vertical Separator -->
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:background="@android:color/darker_gray"/>
+
+                    <!-- Paid-out Balance -->
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:layout_gravity="center">
+
+                        <TextView
+                            android:id="@+id/paidOutBalanceText"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Paid-out Balance"
+                            android:textSize="16sp"
+                            android:textColor="@android:color/darker_gray"
+                            android:layout_gravity="center_horizontal"/>
+
+                        <TextView
+                            android:id="@+id/paidOutAmountText"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="0.000$"
+                            android:textSize="28sp"
+                            android:textColor="@color/black"
+                            android:textStyle="bold"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginTop="8dp"/>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!-- Request Payout Button -->
+                <Button
+                    android:id="@+id/requestPayoutButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Request Payout"
+                    android:textColor="@android:color/white"
+                    android:background="@drawable/shape_button_rounded"
+                    android:layout_marginTop="32dp"
+                    android:layout_marginBottom="8dp"/>
+
+                <!-- Minimum Payout Info -->
+                <TextView
+                    android:id="@+id/minPayoutText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Minimum payout amount is $1"
+                    android:textSize="14sp"
+                    android:textColor="@android:color/darker_gray"
+                    android:layout_gravity="center_horizontal"/>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Featured Section CardView -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/internetSharingCardView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="24dp"
+            android:layout_marginBottom="24dp"
+            android:layout_below="@id/balanceCardView"
+            app:cardElevation="16dp"
+            android:background="@android:color/white"
+            app:cardCornerRadius="12dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <!-- Container -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <!-- Promotion Section-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:orientation="horizontal"
+                        android:padding="16dp">
+
+                        <!-- Illustration Image -->
+                        <ImageView
+                            android:id="@+id/internetSharingImage"
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:src="@drawable/internet_sharing_featured"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginEnd="16dp"
+                            android:contentDescription="Promotion" />
+
+                        <!-- Promotion Text -->
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:layout_gravity="center_vertical">
+
+                            <TextView
+                                android:id="@+id/internetSharingTitle"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Earn by Sharing Internet"
+                                android:textSize="18sp"
+                                android:textColor="@color/black"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/internetSharingSubtitle"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Get rewarded by sharing your unused internet."
+                                android:textSize="14sp"
+                                android:textStyle="bold"
+                                android:textColor="@android:color/darker_gray"
+                                android:layout_marginTop="8dp"/>
+                        </LinearLayout>
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <!-- Badge -->
+                <TextView
+                    android:id="@+id/badgeTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentEnd="true"
+                    android:background="@drawable/shape_badge_red_background"
+                    android:paddingHorizontal="8dp"
+                    android:paddingVertical="4dp"
+                    android:text="Featured"
+                    android:textSize="14sp"
+                    android:textColor="@android:color/white"
+                    android:textStyle="bold"
+                    android:layout_margin="8dp"/>
+
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+
+    </RelativeLayout>
+
+</ScrollView>

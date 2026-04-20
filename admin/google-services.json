@@ -1,0 +1,69 @@
+{
+  "project_info": {
+    "project_number": "1010995439085",
+    "project_id": "earning-app-f3ab1",
+    "storage_bucket": "earning-app-f3ab1.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1010995439085:android:317706764e5a5e6f32f3e4",
+        "android_client_info": {
+          "package_name": "com.app.admin"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1010995439085-5irfdjcirbggkltdbsaq9mi4vi5hnjt4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC1batLSQIadxSNGsjcDfpSCvrh2K8SrLs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1010995439085-5irfdjcirbggkltdbsaq9mi4vi5hnjt4.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1010995439085:android:6e24486503b0ed7b32f3e4",
+        "android_client_info": {
+          "package_name": "murr.imad.myapplication"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1010995439085-5irfdjcirbggkltdbsaq9mi4vi5hnjt4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC1batLSQIadxSNGsjcDfpSCvrh2K8SrLs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1010995439085-5irfdjcirbggkltdbsaq9mi4vi5hnjt4.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      },
+      "admob_app_id": "ca-app-pub-9438801301633447~4954810873"
+    }
+  ],
+  "configuration_version": "1"
+}

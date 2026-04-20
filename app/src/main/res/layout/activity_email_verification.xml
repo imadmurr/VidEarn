@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/lightGray"
+    tools:context=".auth.ui.view.EmailVerificationActivity">
+
+    <!-- Header Frame with Circle Image -->
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="273dp"
+        android:background="@drawable/blue_bg"
+        android:id="@+id/header_frame">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_gravity="center"
+            android:src="@mipmap/ic_launcher"/>
+    </FrameLayout>
+
+    <!-- Verification Instruction Text -->
+    <TextView
+        android:id="@+id/tv_verify_your_email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/header_frame"
+        android:layout_marginTop="32dp"
+        android:layout_marginHorizontal="48dp"
+        android:text="In order to prevent fake accounts, please verify your email by opening the link sent to your inbox."
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:gravity="center"
+        android:textStyle="bold" />
+
+    <!-- Send Verification Button -->
+    <Button
+        android:id="@+id/btn_send_verification_email"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@id/tv_verify_your_email"
+        android:layout_marginTop="24dp"
+        android:layout_marginHorizontal="48dp"
+        android:text="Send Verification Link"
+        android:background="@drawable/shape_button_rounded"
+        android:textColor="@android:color/white"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:gravity="center" />
+
+</RelativeLayout>

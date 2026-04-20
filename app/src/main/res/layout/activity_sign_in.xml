@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/lightGray"
+    tools:context=".auth.ui.view.SignInActivity">
+
+    <!-- Header Frame with Circle Image -->
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="273dp"
+        android:background="@drawable/blue_bg"
+        android:id="@+id/header_frame">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_gravity="center"
+            android:src="@mipmap/ic_launcher"/>
+    </FrameLayout>
+
+    <!-- Username Input Field -->
+    <LinearLayout
+        android:id="@+id/email_input_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/header_frame"
+        android:layout_marginTop="32dp"
+        android:layout_marginHorizontal="48dp"
+        android:orientation="horizontal"
+        android:background="@drawable/rounded_corners"
+        android:padding="10dp">
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/email"
+            android:layout_gravity="center_vertical"/>
+
+        <EditText
+            android:id="@+id/email_input"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:layout_marginStart="10dp"
+            android:layout_gravity="center_vertical"
+            android:hint="Email"
+            android:background="@null"
+            android:inputType="textEmailAddress"/>
+    </LinearLayout>
+
+    <!-- Password Input Field -->
+    <LinearLayout
+        android:id="@+id/password_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/email_input_layout"
+        android:layout_marginTop="24dp"
+        android:layout_marginHorizontal="48dp"
+        android:orientation="horizontal"
+        android:background="@drawable/rounded_corners"
+        android:padding="10dp">
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/password"
+            android:layout_gravity="center_vertical"/>
+
+        <EditText
+            android:id="@+id/password_input"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:layout_marginStart="10dp"
+            android:layout_gravity="center_vertical"
+            android:hint="Password"
+            android:background="@null"
+            android:inputType="textPassword"/>
+
+        <!-- Eye Icon for Toggle Password Visibility -->
+        <ImageView
+            android:id="@+id/eye_icon"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/ic_eye_closed"
+            android:layout_gravity="center_vertical"
+            android:clickable="true"
+            android:focusable="true"/>
+    </LinearLayout>
+
+    <!-- Forgot Password Hyperlink -->
+    <TextView
+        android:id="@+id/forgot_password"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/password_layout"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="52dp"
+        android:layout_marginTop="8dp"
+        android:text="Forgot password?"
+        android:textColor="@color/blue"
+        android:textStyle="bold"
+        android:textSize="14sp"/>
+
+    <!-- Login Button -->
+    <Button
+        android:id="@+id/signin_button"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@id/forgot_password"
+        android:layout_marginTop="24dp"
+        android:layout_marginHorizontal="48dp"
+        android:text="Login"
+        android:background="@drawable/shape_button_rounded"
+        android:textColor="@android:color/white"
+        android:textSize="18sp"
+        android:textStyle="bold"/>
+
+    <!-- Create Account Hyperlink -->
+    <TextView
+        android:id="@+id/create_account"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/signin_button"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        android:padding="10dp"
+        android:text="Don't have an account? Sign Up"
+        android:textColor="@color/blue"
+        android:textStyle="bold"
+        android:textSize="14sp"
+        android:clickable="true"
+        android:focusable="true" />
+
+</RelativeLayout>

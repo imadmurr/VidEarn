@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--TODO (Step 4: Create nav_header_main. xml file and design this as per our requirement.)-->
+<!--START-->
+<!--Here we have add the drawable details to drawable folders and same
+    the String and Dimen values are added in their respective folders and files.-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@color/lightGray"
+    android:padding="16dp"
+    android:theme="@style/ThemeOverlay.AppCompat.Dark">
+
+    <!-- Profile Image with Shadow -->
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/iv_user_image"
+        android:layout_width="@dimen/nav_image_size"
+        android:layout_height="@dimen/nav_image_size"
+        android:layout_gravity="start"
+        android:layout_marginVertical="16dp"
+        android:contentDescription="@string/image_contentDescription"
+        android:src="@mipmap/user_avatar_foreground"/>
+
+    <TextView
+        android:id="@+id/tv_email"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="start"
+        android:textColor="@color/black"
+        android:textSize="@dimen/nav_user_name_text_size"
+        android:textStyle="bold"
+        tools:text="imadmurr1@gmail.com" />
+
+</LinearLayout>
+
+    <!--END-->

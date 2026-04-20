@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--TODO (Step 2: Create a content_main xml file.)-->
+<!--START-->
+<!--Move the activity_main xml file code to this file.-->
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mainLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="?attr/actionBarSize"
+
+    android:background="@drawable/ic_background"
+    android:orientation="vertical"
+    tools:context=".shared.ui.view.MainActivity">
+
+
+    <TextView
+        android:id="@+id/tv_special_offer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/authentication_screen_marginStartEnd"
+        android:layout_marginEnd="@dimen/authentication_screen_marginStartEnd"
+        android:layout_marginTop="16dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:text="The internet sharing feature is finally here!"
+        android:textColor="@color/snackbar_error_color"
+        android:textSize="14sp" />
+
+
+    <!--on below line we are creating a grid view-->
+    <GridView
+        android:id="@+id/mainGRV"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/fab_rate_us"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="56dp"
+        android:horizontalSpacing="6dp"
+        android:numColumns="2"
+        android:padding="10dp"
+        android:verticalSpacing="6dp" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab_rate_us"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="@dimen/fab_margin"
+        android:layout_marginTop="@dimen/fab_margin"
+        android:layout_marginEnd="@dimen/fab_margin"
+        android:layout_marginBottom="@dimen/fab_margin"
+        android:contentDescription="@string/rating_button"
+        android:src="@drawable/ic_baseline_star_24" />
+
+    <TextView
+        android:id="@+id/tv_app_version"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/authentication_screen_marginStartEnd"
+        android:layout_marginEnd="@dimen/authentication_screen_marginStartEnd"
+        android:layout_marginBottom="16dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:text="App version 2.0.4"
+        android:textColor="@color/secondary_text_color"
+        android:textSize="14sp" />
+    <!--
+    <com.google.android.gms.ads.AdView
+        xmlns:ads="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/adView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentTop="true"
+        ads:adSize="BANNER"
+        ads:adUnitId="ca-app-pub-3940256099942544/6300978111">
+    </com.google.android.gms.ads.AdView>
+    -->
+
+    <!--TEST  ca-app-pub-3940256099942544/6300978111-->
+    <!--PROD  ca-app-pub-9438801301633447/3747677938-->
+
+</RelativeLayout>
+
+
+    <!--END-->

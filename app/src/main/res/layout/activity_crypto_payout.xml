@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/lightGray"
+    android:orientation="vertical"
+    tools:context=".payouts.ui.view.activities.CryptoPayoutActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar_crypto_payout_activity"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay" />
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/authentication_screen_til_marginTop"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/authentication_screen_marginStartEnd"
+            android:layout_marginEnd="@dimen/authentication_screen_marginStartEnd"
+            android:gravity="center"
+            android:text="@string/minimum_withdraw_is_10_000_points"
+            android:textColor="@color/black"
+            android:textSize="@dimen/authentication_description_text_size" />
+
+        <TextView
+            android:id="@+id/crypto_pymnt_available_balance"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/authentication_screen_marginStartEnd"
+            android:layout_marginEnd="@dimen/authentication_screen_marginStartEnd"
+            android:layout_marginStart="@dimen/authentication_screen_marginStartEnd"
+            android:text="@string/your_balance_100_000_points"
+            android:textColor="@color/secondary_text_color"
+            android:textSize="16sp"
+            android:textStyle="bold"/>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/authentication_screen_marginStartEnd"
+            android:layout_marginTop="@dimen/authentication_screen_til_marginTop"
+            android:layout_marginEnd="@dimen/authentication_screen_marginStartEnd"
+            app:cardElevation="10dp"
+            app:cardCornerRadius="16dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="@dimen/card_view_layout_content_padding">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/authentication_screen_til_marginStartEnd"
+                    android:layout_marginTop="@dimen/authentication_screen_til_marginTop"
+                    android:layout_marginEnd="@dimen/authentication_screen_til_marginStartEnd">
+
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:id="@+id/et_payment_amount"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/amount"
+                        android:inputType="number"
+                        android:textSize="@dimen/et_text_size" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/authentication_screen_marginStartEnd"
+                    android:layout_marginEnd="@dimen/authentication_screen_marginStartEnd"
+                    android:gravity="start"
+                    android:text="@string/choose_coin"
+                    android:textColor="@color/secondary_text_color"
+                    android:textSize="16sp"
+                    android:textStyle="bold"/>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/authentication_screen_til_marginStartEnd"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="@dimen/authentication_screen_til_marginStartEnd">
+
+                    <Spinner
+                        android:id="@+id/coins_spinner"
+                        android:layout_width="match_parent"
+                        android:spinnerMode="dropdown"
+                        android:layout_height="wrap_content" />
+
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/authentication_screen_marginStartEnd"
+                    android:layout_marginEnd="@dimen/authentication_screen_marginStartEnd"
+                    android:gravity="start"
+                    android:text="@string/choose_network"
+                    android:textColor="@color/secondary_text_color"
+                    android:textSize="16sp"
+                    android:textStyle="bold"/>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/authentication_screen_til_marginStartEnd"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="@dimen/authentication_screen_til_marginStartEnd">
+
+                    <Spinner
+                        android:id="@+id/networks_spinner"
+                        android:layout_width="match_parent"
+                        android:spinnerMode="dropdown"
+                        android:layout_height="wrap_content" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/authentication_screen_til_marginStartEnd"
+                    android:layout_marginTop="@dimen/authentication_screen_til_marginTop"
+                    android:layout_marginEnd="@dimen/authentication_screen_til_marginStartEnd">
+
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:id="@+id/et_payment_address"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:focusable="true"
+                        android:focusableInTouchMode="true"
+                        android:hint="Address"
+                        android:inputType="textLongMessage"
+                        android:textSize="16sp" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <Button
+                    android:id="@+id/btn_add_payment"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="@dimen/btn_marginStartEnd"
+                    android:layout_marginTop="@dimen/intro_screen_sign_up_btn_marginTop"
+                    android:layout_marginEnd="@dimen/btn_marginStartEnd"
+                    android:background="@drawable/shape_button_rounded"
+                    android:foreground="?attr/selectableItemBackground"
+                    android:gravity="center"
+                    android:paddingTop="@dimen/btn_paddingTopBottom"
+                    android:paddingBottom="@dimen/btn_paddingTopBottom"
+                    android:text="@string/request_payout"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/btn_text_size" />
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+            <RelativeLayout
+                android:id="@+id/crypto_payout_ad_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true">
+
+            </RelativeLayout>
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

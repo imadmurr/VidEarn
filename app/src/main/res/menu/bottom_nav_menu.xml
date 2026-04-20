@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/nav_home"
+        android:icon="@drawable/home_24"
+        android:title="Home" />
+    <item
+        android:id="@+id/nav_internetSharing"
+        android:icon="@drawable/wifi"
+        android:title="Sharing" />
+    <item
+        android:id="@+id/nav_surveys"
+        android:icon="@drawable/document_edit"
+        android:title="Surveys" />
+    <item
+        android:id="@+id/nav_daily"
+        android:icon="@drawable/finance"
+        android:title="Daily" />
+</menu>
