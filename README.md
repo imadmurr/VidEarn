@@ -44,7 +44,6 @@ Each feature follows a strict three-layer structure — no Views touching Fireba
 View (Fragment / Activity)  →  ViewModel (state + logic)  →  Repository (data access)  →  Firebase / SDK
 ```
 
-The admin panel is a separate app module written in Jetpack Compose, reflecting an evolution in tooling over the project's lifetime.
 
 ### System overview
 
@@ -82,7 +81,7 @@ The admin panel is a separate app module written in Jetpack Compose, reflecting 
 | Crypto payouts | BTC, USDT | Custom payout flow |
 | Gift cards | Amazon, Google Play, etc. | Custom payout flow |
 
-S2S (server-to-server) postbacks were implemented to validate reward events from providers before crediting user balances — a real-world integration pattern, not just SDK calls.
+S2S (server-to-server) postbacks were implemented to validate reward events from providers before crediting user balances.
 
 ---
 
@@ -98,7 +97,7 @@ S2S (server-to-server) postbacks were implemented to validate reward events from
 
 **Sunsetted — April 2025.**
 
-After 2+ years of operation, the app was taken down from the Play Store due to SDK instability and monetization challenges that made continued maintenance unsustainable. The codebase represents the state at v2.3.3, build 51.
+After 2+ years of operation, the app was unpublished from the Google Play Store due to monetization challenges that made continued maintenance unsustainable. The codebase represents the state at v2.3.3, build 51.
 
 ---
 
