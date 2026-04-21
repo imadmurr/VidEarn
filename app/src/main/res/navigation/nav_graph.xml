@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/FirstFragment"
-        android:name="murr.imad.myapplication.offerwalls.ui.FirstFragment"
+        android:name="murr.imad.videarn.offerwalls.ui.FirstFragment"
         android:label="@string/first_fragment_label"
         tools:layout="@layout/fragment_first" >
 
@@ -17,7 +17,7 @@
     </fragment>
     <fragment
         android:id="@+id/SecondFragment"
-        android:name="murr.imad.myapplication.offerwalls.ui.SecondFragment"
+        android:name="murr.imad.videarn.offerwalls.ui.SecondFragment"
         android:label="@string/second_fragment_label"
         tools:layout="@layout/fragment_second" >
 

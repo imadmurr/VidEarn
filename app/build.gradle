@@ -8,7 +8,7 @@ android {
     compileSdk 34
 
     defaultConfig {
-        applicationId "murr.imad.myapplication"
+        applicationId "com.imadmurr.videarn"
         minSdk 23
         targetSdk 34
         versionCode 51
@@ -17,94 +17,82 @@ android {
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
 
-    viewBinding {
-        enabled = true
-    }
-
     buildTypes {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
+
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
     }
+
     kotlinOptions {
         jvmTarget = '1.8'
     }
-    namespace 'murr.imad.myapplication'
+
+    namespace 'com.imadmurr.videarn'
+
     buildFeatures {
         viewBinding true
     }
 }
 
 dependencies {
-
+    // AndroidX core
     implementation 'androidx.core:core-ktx:1.9.0'
     implementation 'androidx.appcompat:appcompat:1.5.1'
     implementation 'androidx.activity:activity-ktx:1.6.1'
     implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
     implementation 'androidx.preference:preference:1.2.0'
+    implementation 'androidx.recyclerview:recyclerview:1.3.2'
     implementation 'com.google.android.material:material:1.7.0'
 
+    // Lifecycle + coroutines
+    implementation 'androidx.lifecycle:lifecycle-runtime-ktx:2.5.1'
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.6.4'
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-play-services:1.6.4'
+
+    // Navigation
+    implementation 'androidx.navigation:navigation-fragment-ktx:2.7.2'
+    implementation 'androidx.navigation:navigation-ui-ktx:2.7.2'
+
+    // Firebase
     implementation platform('com.google.firebase:firebase-bom:31.0.3')
     implementation 'com.google.firebase:firebase-auth-ktx'
     implementation 'com.google.firebase:firebase-analytics-ktx'
     implementation 'com.google.firebase:firebase-firestore-ktx'
     implementation 'com.google.firebase:firebase-messaging-ktx'
-    implementation 'com.google.android.gms:play-services-ads:21.2.0'
 
-    implementation 'de.hdodenhof:circleimageview:3.1.0'
-    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-play-services:1.6.4'
-
-    //Coroutines
-    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.6.4'
-
-    //For lifecycle dependent coroutines
-    implementation 'androidx.lifecycle:lifecycle-runtime-ktx:2.5.1'
-
-    // This dependency is downloaded from the Google’s Maven repository.
-    // So, make sure you also include that repository in your project's build.gradle file.
-    implementation 'com.google.android.play:app-update:2.1.0'
-    // For Kotlin users also add the Kotlin extensions library for Play In-App Update:
-    implementation 'com.google.android.play:app-update-ktx:2.1.0'
-
+    // Ads
+    implementation 'com.google.android.gms:play-services-ads:25.2.0'
     implementation 'com.google.android.gms:play-services-ads-identifier'
 
-    implementation fileTree(include: ['*.jar', '*.aar'], dir: 'libs')
-    implementation 'io.insert-koin:koin-core:3.2.0'
-    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-core:1.6.4'
-    implementation 'com.github.ptrbrynt.KotlinBloc:core:3.0.1'
+    // In-app updates
+    implementation 'com.google.android.play:app-update:2.1.0'
+    implementation 'com.google.android.play:app-update-ktx:2.1.0'
 
-    implementation "org.jsoup:jsoup:1.14.3"
-    implementation "com.squareup.okhttp3:okhttp:4.9.1" // Optional, for making HTTP requests
+    // Networking
+    implementation 'com.squareup.okhttp3:okhttp:4.9.1'
 
-    //Pawns app sdk
-    implementation 'app.pawns:android-pawns-sdk:1.2.2'
-
-    // adding the sdk and its dependencies
-    implementation 'androidx.recyclerview:recyclerview:1.3.2'
-    implementation 'com.squareup.okhttp3:okhttp:3.12.13'
-    implementation 'com.squareup.picasso:picasso:2.5.2'
-
-    implementation 'com.github.JahidHasanCO:NetworkUsage:1.0.1'
-
-    //Bottom navbar
+    // UI utilities
+    implementation 'de.hdodenhof:circleimageview:3.1.0'
     implementation 'com.github.ibrahimsn98:SmoothBottomBar:1.7.9'
-
-    // Navigation Components
-    implementation 'androidx.navigation:navigation-fragment-ktx:2.7.2'
-    implementation 'androidx.navigation:navigation-ui-ktx:2.7.2'
-
-    implementation project(':wheelSpin')
-
+    implementation 'com.squareup.picasso:picasso:2.5.2'
     implementation("com.ericktijerou.koleton:koleton:1.0.0-beta01")
 
-    //Bitlabs sdk
+    // Monetization SDKs
+    implementation 'app.pawns:android-pawns-sdk:1.2.2'
+    implementation 'com.github.JahidHasanCO:NetworkUsage:1.0.1'
     implementation 'com.github.BitBurst-GmbH.bitlabs-android-library:core:3.2.10'
 
+    // Local modules
+    implementation fileTree(include: ['*.jar', '*.aar'], dir: 'libs')
+    implementation project(':wheelSpin')
+
+    // Testing
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.2.1'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.6.1'
