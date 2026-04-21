@@ -1,6 +1,6 @@
 # VidEarn — Android Rewards App
 
-A self-built, self-published Android application that rewarded users for completing surveys and watching ads. Built and operated solo from January 2023 to April 2025, reaching over 12,600 active users across 174 countries before being sunsetted.
+A self-built, self-published Android application that rewarded users for completing surveys and watching ads. Built and operated solo from January 2023 to April 2025, reaching over 10,600 users across 174 countries before being sunsetted.
 
 > Designed, developed, published, and operated entirely by one person — from product architecture to monetization integration to payout processing.
 
@@ -10,8 +10,7 @@ A self-built, self-published Android application that rewarded users for complet
 
 | Metric | Value |
 |---|---|
-| Active users (Firebase Analytics) | 12,600+ |
-| Registered accounts | 10,300+ |
+| Active users (Firebase Analytics) | 10k+ |
 | Countries reached | 174 |
 | Production releases | 51 (v1.0 → v2.3.3) |
 | Active period | Jan 2023 – Apr 2025 |
@@ -41,38 +40,14 @@ VidEarn_v2.3.3/
 
 Each feature follows a strict three-layer structure — no Views touching Firebase directly:
 
-```mermaid
-graph LR
-    A[View\nFragment / Activity] --> B[ViewModel\nstate + logic]
-    B --> C[Repository\ndata access]
-    C --> D[Firebase / SDK\nremote data source]
+```
+View (Fragment / Activity)  →  ViewModel (state + logic)  →  Repository (data access)  →  Firebase / SDK
 ```
 
-The admin panel is a separate app module written in Jetpack Compose, reflecting an evolution in tooling over the project's lifetime.
 
 ### System overview
 
-```mermaid
-graph TD
-    subgraph app["Main app (Kotlin · MVVM · ViewBinding · Koin DI)"]
-        f1[auth] & f2[home] & f3[dailyearn]
-        f4[offerwalls] & f5[payouts] & f6[referrals]
-    end
-
-    subgraph firebase["Firebase backend"]
-        b1[Authentication] & b2[Firestore]
-        b3[Cloud Messaging] & b4[Cloud Functions]
-    end
-
-    subgraph sdks["Monetization integrations"]
-        s1[BitLabs] & s2[CPXResearch]
-        s3[CpaLead] & s4[AdMob]
-    end
-
-    app -->|Firebase SDK| firebase
-    app -->|Native SDKs + S2S postbacks| sdks
-    admin["Admin panel\nJetpack Compose"] -.->|reads/writes| firebase
-```
+![VidEarn system architecture](architecture.svg)
 
 ---
 
@@ -106,7 +81,7 @@ graph TD
 | Crypto payouts | BTC, USDT | Custom payout flow |
 | Gift cards | Amazon, Google Play, etc. | Custom payout flow |
 
-S2S (server-to-server) postbacks were implemented to validate reward events from providers before crediting user balances — a real-world integration pattern, not just SDK calls.
+S2S (server-to-server) postbacks were implemented to validate reward events from providers before crediting user balances.
 
 ---
 
@@ -122,7 +97,7 @@ S2S (server-to-server) postbacks were implemented to validate reward events from
 
 **Sunsetted — April 2025.**
 
-After 2+ years of operation, the app was taken down from the Play Store due to SDK instability and monetization challenges that made continued maintenance unsustainable. The codebase represents the state at v2.3.3, build 51.
+After 2+ years of operation, the app was unpublished from the Google Play Store due to monetization challenges that made continued maintenance unsustainable. The codebase represents the state at v2.3.3, build 51.
 
 ---
 
